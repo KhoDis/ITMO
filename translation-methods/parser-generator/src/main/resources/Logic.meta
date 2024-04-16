@@ -1,0 +1,43 @@
+grammar Logic;
+
+xor: or xorP;
+
+xorP:
+    XOR and xorP
+  | EPS
+    ;
+
+or: and orP;
+
+orP:
+    OR and orP
+  | EPS
+    ;
+
+and: not andP;
+
+andP:
+    AND atom andP
+  | EPS
+    ;
+
+not:
+    NOT not
+  | atom
+    ;
+
+atom:
+    LBR xor RBR
+  | VAR
+  | CONST
+    ;
+
+XOR: "xor";
+OR: "or";
+AND: "and";
+NOT: "not";
+LBR: "\\(";
+RBR: "\\)";
+VAR: "[a-z]+";
+CONST: "[0-9]+";
+WS: "[ \\t\\r\\n]+" -> skip;

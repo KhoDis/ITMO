@@ -1,0 +1,66 @@
+grammar Calculator;
+
+using T = Double {$.toDouble()};
+
+start -> [res: T]:
+    e=expr {$res = e.value}
+    ;
+
+expr -> [value: T]:
+    t=term ep=exprP(t.value) {$value = ep.res}
+    ;
+
+exprP<lhs: T> -> [res: T]:
+    eop=exprOp
+    t=term {$res = if (eop.pl != null) $lhs + t.value else $lhs - t.value }
+    ep=exprP($res) {$res = ep.res}
+  | EPS {$res = $lhs}
+    ;
+
+term -> [value: T]:
+    fm=factorM
+    tp=termP(fm.value) {$value = tp.res}
+    ;
+
+termP<lhs: T> -> [res: T]:
+    top=termOp
+    fm=factorM {$res = if (top.MUL_0_0 != null) $lhs * fm.value else $lhs / fm.value}
+    tp=termP($res) {$res = tp.res}
+  | EPS {$res = $lhs}
+    ;
+
+factorM -> [value: T]:
+    MINUS lf=factor {$value = -lf.value}
+   | rf=factor {$value = rf.value}
+    ;
+
+factor -> [value: T]:
+    a=atom
+    f=factorP(a.value) {$value = f.value}
+  ;
+
+factorP<lhs: T> -> [value: T]:
+    LOG
+    f=factor {$value = Math.log($lhs) / Math.log(f.value)}
+  | EPS {$value = $lhs}
+    ;
+
+atom -> [value: T]:
+    LBR
+    e=expr
+    RBR {$value = e.value}
+  | n=NUMBER {$value = #T#n.text#}
+    ;
+
+exprOp: pl=PLUS | mn=MINUS;
+termOp: ml=MUL | dv=DIV;
+
+NUMBER: "\\d+";
+PLUS: "\\+";
+MINUS: "-";
+MUL: "\\*";
+LOG: "\\\\\\\\";
+DIV: "/";
+LBR: "\\(";
+RBR: "\\)";
+WS: "[ \\t\\n\\r]+" -> skip;
