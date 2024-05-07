@@ -1,0 +1,10 @@
+Epoch 1/5
+30/30 [==============================] - 28s 855ms/step - loss: 1.1506 - accuracy: 0.5803 - val_loss: 1.1342 - val_accuracy: 0.5891
+Epoch 2/5
+30/30 [==============================] - 23s 797ms/step - loss: 0.9040 - accuracy: 0.6480 - val_loss: 0.8990 - val_accuracy: 0.6505
+Epoch 3/5
+30/30 [==============================] - 32s 1s/step - loss: 0.8054 - accuracy: 0.6951 - val_loss: 0.8286 - val_accuracy: 0.6725
+Epoch 4/5
+30/30 [==============================] - 29s 972ms/step - loss: 0.7565 - accuracy: 0.7139 - val_loss: 0.7579 - val_accuracy: 0.7095
+Epoch 5/5
+30/30 [==============================] - 30s 1s/step - loss: 0.7146 - accuracy: 0.7364 - val_loss: 0.7206 - val_accuracy: 0.7350
