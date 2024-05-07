@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TeXGrammarTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2022-12-27T11:27:22" hostname="LAPTOP-KD" time="0.289">
+  <properties/>
+  <testcase name="testSuperscript()" classname="TeXGrammarTest" time="0.169"/>
+  <testcase name="testCurlyBrackets()" classname="TeXGrammarTest" time="0.005"/>
+  <testcase name="testInvalidBrackets()" classname="TeXGrammarTest" time="0.009"/>
+  <testcase name="testInvalidSubscript()" classname="TeXGrammarTest" time="0.003"/>
+  <testcase name="testFrac()" classname="TeXGrammarTest" time="0.003"/>
+  <testcase name="testSqrt()" classname="TeXGrammarTest" time="0.001"/>
+  <testcase name="testInvalidDocumentStructure()" classname="TeXGrammarTest" time="0.056"/>
+  <testcase name="testInvalidCurlyBrackets()" classname="TeXGrammarTest" time="0.002"/>
+  <testcase name="testValidMath()" classname="TeXGrammarTest" time="0.002"/>
+  <testcase name="testUnaryMinus()" classname="TeXGrammarTest" time="0.002"/>
+  <testcase name="testInvalidUnaryMinus()" classname="TeXGrammarTest" time="0.002"/>
+  <testcase name="testInvalidMathExpression()" classname="TeXGrammarTest" time="0.001"/>
+  <testcase name="testInvalidSubscriptAndSuperscript()" classname="TeXGrammarTest" time="0.001"/>
+  <testcase name="testInvalidSuperscript()" classname="TeXGrammarTest" time="0.001"/>
+  <testcase name="testBrackets()" classname="TeXGrammarTest" time="0.004"/>
+  <testcase name="testSubscriptAndSuperscript()" classname="TeXGrammarTest" time="0.002"/>
+  <testcase name="testInvalidSubscriptAndSuperscriptWithBrackets()" classname="TeXGrammarTest" time="0.002"/>
+  <testcase name="testSubscript()" classname="TeXGrammarTest" time="0.001"/>
+  <testcase name="testSubscriptAndSuperscriptWithBrackets()" classname="TeXGrammarTest" time="0.002"/>
+  <testcase name="testValidDocument()" classname="TeXGrammarTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[line 1:0 mismatched input '(' expecting '\begin'
+line 1:0 mismatched input 'a' expecting '\begin'
+line 4:12 mismatched input '<EOF>' expecting {'+', '-', '*', '/', '=', '_', '^', '$', DIGIT}
+line 1:0 missing '\begin' at '{'
+line 1:1 missing LATIN at '1'
+line 1:2 mismatched input '+' expecting {'}', DIGIT, LATIN}
+line 1:0 mismatched input '-' expecting '\begin'
+line 1:0 mismatched input '1' expecting '\begin'
+line 1:0 mismatched input 'a' expecting '\begin'
+line 1:0 mismatched input 'a' expecting '\begin'
+line 1:0 mismatched input 'a' expecting '\begin'
+]]></system-err>
+</testsuite>
