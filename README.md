@@ -1,2 +1,3 @@
 # itmo
-My ITMO FITIP (КТ) homeworks
+
+My most memorable individual projects that I made while studying as a CS student in ITMO.
